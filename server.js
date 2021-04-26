@@ -1,6 +1,6 @@
 
-const path = require('path');
-const http = require('http');
+const path = require('path');//to get path
+const http = require('http');// for routing or create server
 const express = require('express');
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
