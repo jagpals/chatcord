@@ -9,6 +9,11 @@ function userJoin(id, username, room) {
   return user 
 }
 
+
+
+
+
+
 // Get current user
 function getCurrentUser(id) {
   console.log(users)
