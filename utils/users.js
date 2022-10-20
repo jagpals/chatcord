@@ -3,15 +3,12 @@ const users = [];
 // Join user to chat
 function userJoin(id, username, room) {
   const user = { id, username, room };
-
+  // var idx = users.indexOf(username,room);
+  // console.log(idx);
   users.push(user);
   // console.log(user)
   return user 
 }
-
-
-
-
 
 
 // Get current user
