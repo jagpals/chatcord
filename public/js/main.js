@@ -10,11 +10,27 @@ const{username,room} = Qs.parse(location.search,{
     ignoreQueryPrefix: true
 });
 // join chatroom
-socket.emit('joinRoom',{username,room});
+const checking = [];
+const detail = {username,room};
+var idx = checking.indexOf(detail);
+console.log(idx);
+console.log('xxx');
+if(idx==-1)
+{
+    checking.push(detail);
+   // socket.emit('joinRoom',{username,room});
+}
+else{
+    prompt("username is not available");
+}
+
+
+
 
 //Add users to DOM
 function outputUsers(users)
 {
+    //if(users.find(username))
     userList.innerHTML=`
     ${users.map(user => `<li>${user.username}</li>`).join('')}`;
 }
